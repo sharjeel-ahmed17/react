@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
 import { blogs } from './data/blogs';
 import { useState } from 'react';
+import btnColor from "./Button.module.css"
 function App() {
   let template = "";
   let [count, setCount] = useState(1)
@@ -17,11 +18,12 @@ function App() {
     template = <>
 
 
-      <Cards />
+      <p>welcome to noman ali bari </p>
+      <button className='btn bg-danger text-white mb-3' onClick={() => setPshow(!pshow)}>hide</button>
     </>
 
   } else {
-    template = ""
+    template = <button className='btn bg-danger text-white mb-3' onClick={() => setPshow(!pshow)}>show</button>
   }
   let n = 10;
 
@@ -39,6 +41,32 @@ function App() {
     <>
 
       <div>
+        <p className={btnColor.error}>sharjeel module</p>
+        <p className={btnColor.red}>hello world</p>
+      </div>
+      <div className='container'>
+        <div className="row">
+          <div className="col-md-3 col-sm-6">
+            <h2>sharjeel</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, animi </p>
+          </div>
+          <div className="col-md-3 col-sm-6">
+            <h2>sharjeel</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, animi </p>
+          </div>
+          <div className="col-md-3 col-sm-6">
+            <h2>sharjeel</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, animi </p>
+          </div>
+          <div className="col-md-3 col-sm-6">
+            <h2>sharjeel</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, animi </p>
+          </div>
+        </div>
+
+      </div>
+      <img src={webImg} alt="" style={{ width: "200px", height: "300px" }} />
+      <div>
 
         {template}
         {count}
@@ -49,7 +77,7 @@ function App() {
         <Header title="hello world" description="welcome to sharjeel ahmed company" >
           <h1>welcome to ws cube tech</h1>
         </Header>
-        {blogs.map((v, i) => {
+        {/* {blogs.map((v, i) => {
           return (
             <div className="row">
 
@@ -57,7 +85,7 @@ function App() {
             </div>
           )
 
-        })}
+        })} */}
         <Footer />
 
       </div>
@@ -71,7 +99,6 @@ export default App;
 
 
 function ProductItem({ pitems }) {
-  // console.log(pitems.title)
   return (
 
     <div className='mb-4 col-md-4 col-sm-6'>

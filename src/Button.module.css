@@ -1,0 +1,11 @@
+.red {
+    color: red;
+}
+
+.error {
+    color: green;
+    padding: 20px;
+    border: 2px solid purple;
+    width: 200px;
+    margin: 10px;
+}
