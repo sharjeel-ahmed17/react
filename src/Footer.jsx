@@ -4,6 +4,7 @@ import "./footer.css";
 const Footer = () => {
   return (
    <>
+
    <div className='footerStyle'>
 
    this is footer section

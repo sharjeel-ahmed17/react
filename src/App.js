@@ -12,7 +12,9 @@ import btnColor from "./Button.module.css"
 function App() {
   let template = "";
   let [count, setCount] = useState(1)
-  let [pshow, setPshow] = useState(true)
+  let [pshow, setPshow] = useState(true);
+  let [status, setSatatus] = useState(false);
+  let [pstatus, setPstatus] = useState(false);
 
   if (pshow) {
     template = <>
@@ -39,7 +41,25 @@ function App() {
   return (
 
     <>
+{/* responsive menu bar */}
 
+      {/* show and hide password */}
+      <div className='container mx-auto'>
+        <input type={(pstatus) ? "text" : "password"} />
+        <button onClick={()=>setPstatus(!pstatus)}>{(pstatus) ? "hide" : "show"}</button>
+
+      </div>
+      {/* ternary oprator use in react js */}
+
+      <div>
+        <button onClick={() => setSatatus(!status)}>{(status) ? "hide" : "show"}</button>
+        {(status) ?
+          <p>wlcome to new world</p>
+          :
+          ""
+
+        }
+      </div>
       <div>
         <p className={btnColor.error}>sharjeel module</p>
         <p className={btnColor.red}>hello world</p>
@@ -86,7 +106,9 @@ function App() {
           )
 
         })} */}
-        <Footer />
+        <Footer>
+
+        </Footer>
 
       </div>
     </>
