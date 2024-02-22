@@ -16,6 +16,9 @@ function App() {
   let [status, setSatatus] = useState(false);
   let [pstatus, setPstatus] = useState(false);
 
+  let [menustatus, setMenustatus] = useState(false);
+  let [modalsatus, setModelStatus] = useState(false);
+
   if (pshow) {
     template = <>
 
@@ -41,14 +44,34 @@ function App() {
   return (
 
     <>
-{/* responsive menu bar */}
+
+      {/* modal box */}
+      <div>
+        <button className='en' onClick={() => setModelStatus(!modalsatus)}>enquire now</button>
+        <div className={`modal-overlay ${modalsatus ? 'modalShow' : ''}`}></div>
+        <div className={`modal-box ${modalsatus ? 'showModal' : ''}`}>
+          <h3>enquiry</h3>
+        </div>
+      </div>
+      {/* responsive menu bar */}
+      <button className='micon' onClick={() => setMenustatus(!menustatus)}>{
+        (menustatus) ? <span>&times;</span> : <span>&#9776;</span>
+      }</button>
+      <div className={`menu ${menustatus ? 'active' : ''}`}>
+        <ul>
+          <li>home</li>
+          <li>aboout</li>
+          <li>gallary</li>
+          <li>contact us</li>
+        </ul>
+      </div>
 
       {/* show and hide password */}
-      <div className='container mx-auto'>
+      {/* <div className='container mx-auto'>
         <input type={(pstatus) ? "text" : "password"} />
-        <button onClick={()=>setPstatus(!pstatus)}>{(pstatus) ? "hide" : "show"}</button>
+        <button onClick={() => setPstatus(!pstatus)}>{(pstatus) ? "hide" : "show"}</button>
 
-      </div>
+      </div> */}
       {/* ternary oprator use in react js */}
 
       <div>
