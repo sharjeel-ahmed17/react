@@ -1,0 +1,52 @@
+.todoList {
+    width: 1200px;
+    margin: auto;
+}
+
+form {
+    width: 1150px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    flex-basis: 80%;
+    height: 40px;
+
+}
+
+form button {
+    flex-basis: 20%;
+
+}
+
+.outerDIv {
+    width: 1150px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.outerDIv ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outerDIv ul li {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+
+
+}
+
+.outerDIv ul li span {
+    cursor: pointer;
+}

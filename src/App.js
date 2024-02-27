@@ -9,6 +9,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js"
 import { blogs } from './data/blogs';
 import { useState } from 'react';
 import btnColor from "./Button.module.css"
+
 function App() {
   let template = "";
   let [count, setCount] = useState(1)
@@ -41,6 +42,12 @@ function App() {
     console.log(a + b)
 
   }
+
+  const products = [
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+  ];
   return (
 
     <>
@@ -67,11 +74,11 @@ function App() {
       </div>
 
       {/* show and hide password */}
-      {/* <div className='container mx-auto'>
+      <div className='container mx-auto'>
         <input type={(pstatus) ? "text" : "password"} />
         <button onClick={() => setPstatus(!pstatus)}>{(pstatus) ? "hide" : "show"}</button>
 
-      </div> */}
+      </div>
       {/* ternary oprator use in react js */}
 
       <div>
